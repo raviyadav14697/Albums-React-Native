@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 class AlbumList extends Component {
@@ -65,15 +65,15 @@ class AlbumList extends Component {
         {
             //{this.state.albums.map((album) => album.title + "\n" + album.artist}
             return (
-                <View>
+                <ScrollView>
                     {this.rendeAlbumDetails()}
-                </View>
+                </ScrollView>
             );
         }
         
         return (
             <View>
-                <Text>
+                <Text style = {styles.loadingTextStyle}>
                         Loading Data...
                 </Text>
             </View>
@@ -83,3 +83,13 @@ class AlbumList extends Component {
 }
 
 export default AlbumList;
+
+const styles = {
+    loadingTextStyle : {
+        marginTop : 10, 
+        alignSelf : 'center',
+        color : '#007aff',
+        fontSize : 12,
+        fontWeight : 'bold',
+    }
+}

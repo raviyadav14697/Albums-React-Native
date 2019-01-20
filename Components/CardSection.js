@@ -11,6 +11,7 @@ export default function CardSection(props) {
 
 
 const styles = {
+
     cardSecionStyle:{
         borderBottomWidth: 1,
         padding: 5,
@@ -19,5 +20,6 @@ const styles = {
         flexDirection: 'row',
         borderColor: '#ddd',
         position: 'relative'
-    }
+    },
+    
 };
